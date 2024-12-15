@@ -1,6 +1,6 @@
 local mi = false
 local screengui = Instance.new("ScreenGui")
-screengui.Parent = game.Players.LocalPlayer.PlayerGui
+screengui.Parent = game.CoreGui
 screengui.Name = "arch"
 local on = Instance.new("ImageButton")
 on.Parent = screengui
