@@ -196,6 +196,17 @@ dex.TextColor3 = Color3.new(0,0,0)
 dex.TextStrokeTransparency = 0
 dex.TextStrokeColor3 = Color3.new(255,0,0)
 dex.TextSize = 25
+local noeffect = Instance.new("TextButton")
+noeffect.Parent = mainmain
+noeffect.Name = "dex"
+noeffect.BackgroundTransparency = 1
+noeffect.Size = UDim2.new(0,350,0,52)
+noeffect.Position = UDim2.new(-0.002,0,0.8,0)
+noeffect.Text = "Disable Effect"
+noeffect.TextColor3 = Color3.new(0,0,0)
+noeffect.TextStrokeTransparency = 0
+noeffect.TextStrokeColor3 = Color3.new(255,0,0)
+noeffect.TextSize = 25
 local playerfolder = Instance.new("Folder")
 playerfolder.Parent = mainfunc
 playerfolder.Name = "player"
@@ -379,4 +390,9 @@ output.MouseButton1Click:Connect(function()
 end)
 admin.MouseButton1Click:Connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+noeffect.MouseButton1Click:Connect(function()
+	for _, light in pairs(game.Lighting:GetChildren()) do
+		light:Destroy()
+	end
 end)
